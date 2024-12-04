@@ -1,16 +1,6 @@
+
+/* About section styles */
 .about {
-    display: flex;
-    flex-direction: row;
-    min-height: auto;
-    background-color: #2c2a2a;
-    padding-left: 1.5cm;
-    padding-top: 1cm;
-    padding-right: 3cm; /* Ensures consistent spacing from the right */
-    margin: 0 auto;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  .about {
     display: flex;
     flex-direction: row;
     min-height: auto;
@@ -45,5 +35,148 @@
         padding-left: 0.5rem; /* Further reduce padding on very small screens */
         padding-right: 0.5rem; /* Further reduce padding */
         padding-top: 0.3rem; /* Even less top padding */
+    }
+}
+
+/* Chatbox container */
+.chatbox {
+    width: 100%; /* Full width */
+    max-width: 100%; /* Remove max-width to make it span full width */
+    height: 500px; /* Decreased height */
+    border: 4px solid #12ccd3;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+  
+/* Container for messages */
+.chatContainer {
+    flex: 1;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+  
+/* Styling for each message */
+.message {
+    padding: 8px 12px;
+    border-radius: 20px;
+    margin: 5px 0;
+    max-width: 70%;
+    word-wrap: break-word;
+}
+  
+/* User message styling */
+.userMessage {
+    background-color: #12ccd3;
+    align-self: flex-end;
+    color: white;
+}
+  
+/* Bot message styling */
+.botMessage {
+    background-color: #e1711c;
+    align-self: flex-start;
+    color: white;
+}
+  
+/* Input container styling */
+.inputContainer {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #0fd0b6;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+/* Input field styling */
+.input {
+    width: 85%;
+    padding: 8px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+}
+  
+/* Send button styling */
+.sendButton {
+    padding: 8px 12px;
+    background-color: orange;
+    color: lightblue;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+  
+/* Send button hover effect */
+.sendButton:hover {
+    background-color: #d34f2a;
+}
+
+/* Responsive Styles */
+
+/* Mobile devices */
+@media (max-width: 600px) {
+    .chatbox {
+        width: 100%; /* Full width on mobile */
+        height: 200px; /* Adjusted height for mobile */
+    }
+
+    .message {
+        max-width: 90%;
+        font-size: 14px;
+    }
+
+    .input {
+        width: 100%;
+    }
+
+    .sendButton {
+        padding: 5px 10px;
+    }
+}
+
+/* Tablet devices */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .chatbox {
+        width: 100%; /* Full width on tablet */
+        height: 450px; /* Adjusted height for tablet */
+    }
+
+    .message {
+        max-width: 80%;
+        font-size: 16px;
+    }
+
+    .input {
+        width: 75%;
+    }
+
+    .sendButton {
+        padding: 8px 12px;
+    }
+}
+
+/* Large Screens / Desktop */
+@media (min-width: 1025px) {
+    .chatbox {
+        width: 100%; /* Full width on large screens */
+        height: 500px; /* Adjusted height for larger screens */
+    }
+
+    .message {
+        max-width: 70%;
+        font-size: 16px;
+    }
+
+    .input {
+        width: 85%;
+    }
+
+    .sendButton {
+        padding: 8px 12px;
     }
 }
